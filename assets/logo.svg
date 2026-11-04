@@ -1,0 +1,164 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <radialGradient id="bgGlow" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+      <stop offset="0%" stop-color="#242B35" />
+      <stop offset="70%" stop-color="#141419" />
+      <stop offset="100%" stop-color="#0E0E12" />
+    </radialGradient>
+
+    <!-- Neon Green Glow Gradient -->
+    <linearGradient id="neonGreenGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#55FF9E" />
+      <stop offset="100%" stop-color="#35D07F" />
+    </linearGradient>
+
+    <!-- Gold Accent Gradient -->
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF275" />
+      <stop offset="100%" stop-color="#F5A623" />
+    </linearGradient>
+
+    <!-- Visor Cyber Glow -->
+    <linearGradient id="cyberVisorGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00E5FF" />
+      <stop offset="60%" stop-color="#35D07F" />
+      <stop offset="100%" stop-color="#FFE600" />
+    </linearGradient>
+
+    <!-- Filter for Glow -->
+    <filter id="neonGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="subtleGlow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- 1. Base Badge Container -->
+  <circle cx="256" cy="256" r="240" fill="url(#bgGlow)" stroke="#1F232C" stroke-width="6" />
+
+  <!-- 2. WHEELY9000 Outer Telemetry Gear / Rim -->
+  <circle cx="256" cy="256" r="226" fill="none" stroke="#252A36" stroke-width="12" />
+  
+  <!-- Outer Neon Circuit Ring -->
+  <circle cx="256" cy="256" r="216" fill="none" stroke="url(#neonGreenGrad)" stroke-width="6" stroke-dasharray="14 8" filter="url(#neonGlow)" opacity="0.9" />
+
+  <!-- Telemetry Tick Marks (36 ticks) -->
+  <g stroke="#35D07F" stroke-width="3" opacity="0.75">
+    <!-- Top, Bottom, Left, Right Accents -->
+    <line x1="256" y1="36" x2="256" y2="48" stroke="#FFE600" stroke-width="4" />
+    <line x1="256" y1="464" x2="256" y2="476" stroke="#FFE600" stroke-width="4" />
+    <line x1="36" y1="256" x2="48" y2="256" stroke="#FFE600" stroke-width="4" />
+    <line x1="464" y1="256" x2="476" y2="256" stroke="#FFE600" stroke-width="4" />
+
+    <!-- Rotated ticks -->
+    <line x1="256" y1="40" x2="256" y2="48" transform="rotate(30 256 256)" />
+    <line x1="256" y1="40" x2="256" y2="48" transform="rotate(60 256 256)" />
+    <line x1="256" y1="40" x2="256" y2="48" transform="rotate(120 256 256)" />
+    <line x1="256" y1="40" x2="256" y2="48" transform="rotate(150 256 256)" />
+    <line x1="256" y1="40" x2="256" y2="48" transform="rotate(210 256 256)" />
+    <line x1="256" y1="40" x2="256" y2="48" transform="rotate(240 256 256)" />
+    <line x1="256" y1="40" x2="256" y2="48" transform="rotate(300 256 256)" />
+    <line x1="256" y1="40" x2="256" y2="48" transform="rotate(330 256 256)" />
+  </g>
+
+  <!-- Inner Gold Wheel Track -->
+  <circle cx="256" cy="256" r="190" fill="none" stroke="url(#goldGrad)" stroke-width="2.5" opacity="0.4" />
+  
+  <!-- Kinetic Wheel Spoke Accents -->
+  <g stroke="#35D07F" stroke-width="2" opacity="0.25">
+    <line x1="256" y1="70" x2="256" y2="150" />
+    <line x1="256" y1="362" x2="256" y2="442" />
+    <line x1="70" y1="256" x2="150" y2="256" />
+    <line x1="362" y1="256" x2="442" y2="256" />
+    <line x1="125" y1="125" x2="185" y2="185" />
+    <line x1="327" y1="327" x2="387" y2="387" />
+    <line x1="387" y1="125" x2="327" y2="185" />
+    <line x1="185" y1="327" x2="125" y2="387" />
+  </g>
+
+  <!-- 3. Rebellious Hamster Silhouette & Character -->
+  <g id="hamster-emblem" transform="translate(0, 8)">
+    <!-- Ears -->
+    <!-- Left Ear -->
+    <circle cx="168" cy="162" r="44" fill="#D48622" stroke="#17171B" stroke-width="4" />
+    <circle cx="168" cy="162" r="26" fill="#FFB2B2" opacity="0.9" />
+
+    <!-- Right Ear -->
+    <circle cx="344" cy="162" r="44" fill="#D48622" stroke="#17171B" stroke-width="4" />
+    <circle cx="344" cy="162" r="26" fill="#FFB2B2" opacity="0.9" />
+
+    <!-- Head Base -->
+    <path d="M150 250 C130 330 180 390 256 390 C332 390 382 330 362 250 C355 190 310 170 256 170 C202 170 157 190 150 250 Z" 
+          fill="#E89B35" stroke="#17171B" stroke-width="6" />
+
+    <!-- Cheek Fluff (Tufts) -->
+    <path d="M148 270 L118 285 L144 305 L124 325 L160 335" fill="#E89B35" stroke="#17171B" stroke-width="4" stroke-linejoin="round" />
+    <path d="M364 270 L394 285 L368 305 L388 325 L352 335" fill="#E89B35" stroke="#17171B" stroke-width="4" stroke-linejoin="round" />
+
+    <!-- Fluffy Muzzle & Belly Highlights -->
+    <ellipse cx="256" cy="336" rx="54" ry="38" fill="#FFF2DC" />
+
+    <!-- Rebellious Cyberpunk Visor / Goggles -->
+    <g id="cyber-visor" filter="url(#neonGlow)">
+      <!-- Visor Housing Frame -->
+      <path d="M174 230 C174 215 190 205 215 205 L297 205 C322 205 338 215 338 230 L334 262 C334 274 320 282 300 282 L212 282 C192 282 178 274 178 262 Z" 
+            fill="#12161E" stroke="#35D07F" stroke-width="5" />
+      
+      <!-- Visor Glowing Shield Lens -->
+      <path d="M184 232 C184 220 196 213 216 213 L296 213 C316 213 328 220 328 232 L325 256 C325 266 314 273 298 273 L214 273 C198 273 187 266 187 256 Z" 
+            fill="url(#cyberVisorGrad)" opacity="0.9" />
+
+      <!-- Digital Scanlines on Visor -->
+      <line x1="192" y1="230" x2="320" y2="230" stroke="#FFFFFF" stroke-width="2.5" opacity="0.8" />
+      <line x1="198" y1="244" x2="314" y2="244" stroke="rgba(255,255,255,0.4)" stroke-width="2" />
+      <line x1="208" y1="258" x2="304" y2="258" stroke="rgba(255,255,255,0.4)" stroke-width="1.5" />
+
+      <!-- HUD Target Reticle / Data Node -->
+      <circle cx="288" cy="244" r="8" fill="none" stroke="#FFFFFF" stroke-width="2" opacity="0.9" />
+      <circle cx="288" cy="244" r="3" fill="#FFFFFF" opacity="0.9" />
+    </g>
+
+    <!-- Hamster Nose -->
+    <polygon points="248,318 264,318 256,328" fill="#FF6B8B" stroke="#17171B" stroke-width="2" />
+
+    <!-- Rebellious Smirk / Mouth -->
+    <path d="M256 328 L256 338 Q256 348 242 346 M256 338 Q274 348 284 336" 
+          stroke="#17171B" stroke-width="4.5" stroke-linecap="round" fill="none" />
+
+    <!-- Golden Cyber Whiskers -->
+    <g stroke="url(#goldGrad)" stroke-width="3" stroke-linecap="round" opacity="0.9">
+      <!-- Left Whiskers -->
+      <line x1="220" y1="328" x2="148" y2="312" />
+      <line x1="222" y1="338" x2="142" y2="340" />
+      <line x1="224" y1="348" x2="154" y2="368" />
+      <!-- Right Whiskers -->
+      <line x1="292" y1="328" x2="364" y2="312" />
+      <line x1="290" y1="338" x2="370" y2="340" />
+      <line x1="288" y1="348" x2="358" y2="368" />
+    </g>
+
+    <!-- Tiny Punk Forehead Mohawk / Cyber Tuft -->
+    <path d="M246 172 L256 142 L266 172 Z" fill="#FFE600" stroke="#17171B" stroke-width="2" />
+    <path d="M236 176 L244 150 L250 174 Z" fill="#35D07F" stroke="#17171B" stroke-width="2" />
+  </g>
+
+  <!-- 4. Lower Banner / Blockchain Cryptographic Hash Node Mark -->
+  <g transform="translate(256, 436)" filter="url(#subtleGlow)">
+    <!-- Node Box -->
+    <rect x="-92" y="-18" width="184" height="36" rx="10" fill="#17171B" stroke="#35D07F" stroke-width="3" />
+    <text x="0" y="5" font-family="'Courier New', Courier, monospace" font-size="16" font-weight="900" fill="#FFE600" text-anchor="middle" letter-spacing="4">
+      $SQK · PoHW
+    </text>
+  </g>
+</svg>

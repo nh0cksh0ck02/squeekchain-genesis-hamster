@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/logo.png" width="180" alt="SqueekChain Genesis Logo" style="border-radius: 50%; box-shadow: 0 0 25px rgba(53, 208, 127, 0.4);" />
+</p>
+
 # 🐹 SqueekChain Genesis — Testnet Simulator & Kinetic Rig ⚡
 
 [![GitHub license](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
